@@ -1,0 +1,86 @@
+@import "reset.css";
+
+@font-face {
+  font-family: "Manege";
+  src: url("../fonts/Manege Demo Light.otf") format("opentype");
+  font-style: normal;
+}
+
+body {
+  font-family: "Manege";
+  position: relative;
+  overflow: hidden;
+}
+
+.content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+h1 {
+  position: absolute;
+  font-family: "Manege";
+  color: white;
+  font-size: 25vh;
+  text-align: center;
+}
+
+.first {
+  display: run-in;
+  animation: blink 4s ease infinite;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 100%;
+  }
+
+  50% {
+    opacity: 0%;
+  }
+
+  100% {
+    opacity: 0%;
+  }
+}
+
+.second {
+  opacity: 0%;
+  animation: reverseblink 4s ease infinite;
+}
+
+@keyframes reverseblink {
+  40% {
+    opacity: 0%;
+  }
+
+  50% {
+    opacity: 100%;
+  }
+}
+
+#canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.btn {
+    font-size: 10vh;
+    padding: 10px 24px;
+    color: #000000;
+    border: 1px solid black;
+    border-radius: 50px;
+    text-decoration: none;
+    position: fixed;
+    left: 50%;
+    bottom: 10%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    z-index: 1;
+}
